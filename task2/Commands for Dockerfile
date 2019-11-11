@@ -1,4 +1,0 @@
-docker build -t "node" .
-docker run -it -d --name=namenode --network=cluster-network --hostname=namenode -p 8081:50070 node /bin/sh
-docker run -it -d --name=standbynode --network=cluster-network --hostname=standbynode -p 8082:50070 node /bin/sh
-docker run -it -d --name=datanode --network=cluster-network --hostname=datanode -p 8083:50070 node /bin/sh
