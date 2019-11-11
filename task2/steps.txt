@@ -1,0 +1,22 @@
+ALL NODES:
+hadoop-daemon.sh start journalnode
+
+ACTIVE NODE:
+hdfs namenode -format
+hadoop-daemon.sh start namenode
+
+STANDBY NODE:
+hdfs namenode -bootstrapStandby
+hadoop-daemon.sh start namenode
+
+ALL NODES:
+zkServer.sh start
+
+DATANODE:
+hadoop-daemon.sh start datanode
+
+ACTIVE && STANDBY NODES:
+hdfs zkfc -formatZK
+hadoop-daemon.sh start zkfc
+hdfs haadmin -getServiceState namenode
+hdfs haadmin -getServiceState standbynode
