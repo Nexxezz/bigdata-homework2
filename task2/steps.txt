@@ -1,3 +1,9 @@
+COMMANDS FOR DOCKER CONTAINERS:
+docker network create hadoop-network
+docker run -it --hostname "namenode.cluster.com" --name "namenode" --network hadoop-network image_id
+docker run -it --hostname "standbynode.cluster.com" --name "standbynode" --network hadoop-network image_id
+docker run -it --hostname "datanode.cluster.com" --name "datanode" --network hadoop-network image_id
+
 ALL NODES:
 hadoop-daemon.sh start journalnode
 
