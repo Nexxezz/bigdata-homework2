@@ -1,12 +1,10 @@
 <configuration>
 	<property>
-		<name>fs.default</name>
-		<value>hdfs://ha-cluster
-		</value>
+		<name>fs.defaultFS</name>
+		<value>hdfs://ha-cluster</value>
 	</property>
 	<property>
 		<name>dfs.journalnode.edits.dir</name>
-		<value>/home/journalnode
-		</value>
+		<value>/home/journalnode</value>
 	</property>
 </configuration>
